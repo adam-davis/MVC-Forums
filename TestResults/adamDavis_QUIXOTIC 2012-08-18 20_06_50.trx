@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="ab7d4472-372c-4517-8b08-6a512ddf554e" name="adamDavis@QUIXOTIC 2012-08-18 20:06:50" runUser="QUIXOTIC\adamDavis" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="f6b383a0-5f33-4da2-8df5-7dc9dfa7b310">
+    <Deployment runDeploymentRoot="adamDavis_QUIXOTIC 2012-08-18 20_06_50">
+      <DeploymentItem filename="c:\documents and settings\adamdavis\my documents\visual studio 2010\Projects\MvcForums\MvcForums\bin\MvcForums.dll" />
+      <DeploymentItem filename="C:\Program Files\NUnit 2.6.1\bin\framework\nunit.framework.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-08-18T20:06:50.2343750-04:00" queuing="2012-08-18T20:06:56.2656250-04:00" start="2012-08-18T20:06:56.6250000-04:00" finish="2012-08-18T20:07:12.9531250-04:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="2" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="1" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="QUIXOTIC" outcome="Error" timestamp="2012-08-18T20:07:12.9375000-04:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Index" storage="c:\documents and settings\adamdavis\my documents\visual studio 2010\projects\mvcforums\mvcforums.tests\bin\debug\mvcforums.tests.dll" id="061d62a5-6a4a-08c6-3c5d-c3ada0bd0f98">
+      <Execution id="8b168aa6-99d9-4c7a-b59e-4c1dd191dfce" />
+      <TestMethod codeBase="C:/Documents and Settings/adamDavis/my documents/visual studio 2010/Projects/MvcForums/MvcForums.Tests/bin/Debug/MvcForums.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcForums.Tests.Controllers.HomeControllerTest, MvcForums.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="About" storage="c:\documents and settings\adamdavis\my documents\visual studio 2010\projects\mvcforums\mvcforums.tests\bin\debug\mvcforums.tests.dll" id="a5e32a59-f574-9091-2187-dc0611252bcd">
+      <Execution id="d39e9d1a-204f-4a30-ad12-0437f4f40013" />
+      <TestMethod codeBase="C:/Documents and Settings/adamDavis/my documents/visual studio 2010/Projects/MvcForums/MvcForums.Tests/bin/Debug/MvcForums.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcForums.Tests.Controllers.HomeControllerTest, MvcForums.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="061d62a5-6a4a-08c6-3c5d-c3ada0bd0f98" executionId="8b168aa6-99d9-4c7a-b59e-4c1dd191dfce" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a5e32a59-f574-9091-2187-dc0611252bcd" executionId="d39e9d1a-204f-4a30-ad12-0437f4f40013" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="8b168aa6-99d9-4c7a-b59e-4c1dd191dfce" testId="061d62a5-6a4a-08c6-3c5d-c3ada0bd0f98" testName="Index" computerName="QUIXOTIC" duration="00:00:16.0468750" startTime="2012-08-18T20:06:56.9062500-04:00" endTime="2012-08-18T20:07:12.9531250-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8b168aa6-99d9-4c7a-b59e-4c1dd191dfce">
+    </UnitTestResult>
+    <UnitTestResult executionId="d39e9d1a-204f-4a30-ad12-0437f4f40013" testId="a5e32a59-f574-9091-2187-dc0611252bcd" testName="About" computerName="QUIXOTIC" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d39e9d1a-204f-4a30-ad12-0437f4f40013">
+    </UnitTestResult>
+  </Results>
+</TestRun>

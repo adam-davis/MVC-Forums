@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ForumMain.master.cs" Inherits="MvcForums.Views.Shared.ForumMain" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder  ClientIDMode="Static" ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<asp:ContentPlaceHolder ClientIDMode="Static" ID="header" runat="server">
+<div id="forumHeader">
+
+<span id="forumTitle">Welcome to this wonderful forum!</span>
+
+</div>
+</asp:ContentPlaceHolder>
+
+    <div>
+        <asp:ContentPlaceHolder ClientIDMode="Static" ID="mainBody" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+</body>
+</html>

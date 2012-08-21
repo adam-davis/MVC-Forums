@@ -1,0 +1,1 @@
+This is just a little weekend project using the .NET MVC Framework for my own learning purposes. 

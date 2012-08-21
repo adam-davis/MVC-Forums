@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MvcForumsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="MvcForumsModelStoreContainer">
+    <EntitySet Name="Users" EntityType="MvcForumsModel.Store.Users" store:Type="Tables" store:Schema="dbo" store:Name="Users">
+      <DefiningQuery>SELECT 
+      [Users].[UserID] AS [UserID], 
+      [Users].[UserName] AS [UserName], 
+      [Users].[Password] AS [Password], 
+      [Users].[EmailAddress] AS [EmailAddress], 
+      [Users].[CreateDate] AS [CreateDate]
+      FROM [dbo].[Users] AS [Users]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'MvcForums.dbo.Users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="Password" />
+      <PropertyRef Name="EmailAddress" />
+      <PropertyRef Name="CreateDate" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="EmailAddress" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+</Schema>

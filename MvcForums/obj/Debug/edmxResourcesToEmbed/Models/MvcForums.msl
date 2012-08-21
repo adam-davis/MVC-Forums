@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MvcForumsModelStoreContainer" CdmEntityContainer="MvcForumsEntities">
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="MvcForumsModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="role1" ColumnName="role" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Forum">
+      <EntityTypeMapping TypeName="MvcForumsModel.Forum">
+        <MappingFragment StoreEntitySet="Forum">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Post">
+      <EntityTypeMapping TypeName="MvcForumsModel.Post">
+        <MappingFragment StoreEntitySet="Post">
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="parent_post" ColumnName="parent_post" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Thread">
+      <EntityTypeMapping TypeName="MvcForumsModel.Thread">
+        <MappingFragment StoreEntitySet="Thread">
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="forum" ColumnName="forum" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="MvcForumsModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

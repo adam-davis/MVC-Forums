@@ -1,0 +1,10 @@
+c:\documents and settings\adamdavis\my documents\visual studio 2010\Projects\MvcForums\MvcForums.Tests\bin\Debug\MvcForums.Tests.dll.config
+c:\documents and settings\adamdavis\my documents\visual studio 2010\Projects\MvcForums\MvcForums.Tests\bin\Debug\MvcForums.Tests.dll
+c:\documents and settings\adamdavis\my documents\visual studio 2010\Projects\MvcForums\MvcForums.Tests\bin\Debug\MvcForums.Tests.pdb
+c:\documents and settings\adamdavis\my documents\visual studio 2010\Projects\MvcForums\MvcForums.Tests\bin\Debug\MvcForums.dll
+c:\documents and settings\adamdavis\my documents\visual studio 2010\Projects\MvcForums\MvcForums.Tests\bin\Debug\nunit.framework.dll
+c:\documents and settings\adamdavis\my documents\visual studio 2010\Projects\MvcForums\MvcForums.Tests\bin\Debug\MvcForums.pdb
+c:\documents and settings\adamdavis\my documents\visual studio 2010\Projects\MvcForums\MvcForums.Tests\bin\Debug\nunit.framework.xml
+c:\documents and settings\adamdavis\my documents\visual studio 2010\Projects\MvcForums\MvcForums.Tests\obj\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\adamdavis\my documents\visual studio 2010\Projects\MvcForums\MvcForums.Tests\obj\Debug\MvcForums.Tests.dll
+c:\documents and settings\adamdavis\my documents\visual studio 2010\Projects\MvcForums\MvcForums.Tests\obj\Debug\MvcForums.Tests.pdb

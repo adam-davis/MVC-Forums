@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MvcForumsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="MvcForumsModelStoreContainer">
+    <EntitySet Name="Forum" EntityType="MvcForumsModel.Store.Forum" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Post" EntityType="MvcForumsModel.Store.Post" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Role" EntityType="MvcForumsModel.Store.Role" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Thread" EntityType="MvcForumsModel.Store.Thread" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="MvcForumsModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__Post__author__267ABA7A" Association="MvcForumsModel.Store.FK__Post__author__267ABA7A">
+      <End Role="User" EntitySet="User" />
+      <End Role="Post" EntitySet="Post" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Post__parent_pos__239E4DCF" Association="MvcForumsModel.Store.FK__Post__parent_pos__239E4DCF">
+      <End Role="Thread" EntitySet="Thread" />
+      <End Role="Post" EntitySet="Post" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Thread__author__276EDEB3" Association="MvcForumsModel.Store.FK__Thread__author__276EDEB3">
+      <End Role="User" EntitySet="User" />
+      <End Role="Thread" EntitySet="Thread" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Thread__forum__117F9D94" Association="MvcForumsModel.Store.FK__Thread__forum__117F9D94">
+      <End Role="Forum" EntitySet="Forum" />
+      <End Role="Thread" EntitySet="Thread" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Users__role__25869641" Association="MvcForumsModel.Store.FK__Users__role__25869641">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Forum">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="120" />
+    <Property Name="description" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="author" Type="int" Nullable="false" />
+    <Property Name="parent_post" Type="int" Nullable="false" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="role" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Thread">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="author" Type="int" Nullable="false" />
+    <Property Name="title" Type="varchar" Nullable="false" MaxLength="55" />
+    <Property Name="forum" Type="int" Nullable="false" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="EmailAddress" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="role" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Post__author__267ABA7A">
+    <End Role="User" Type="MvcForumsModel.Store.User" Multiplicity="1" />
+    <End Role="Post" Type="MvcForumsModel.Store.Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Post">
+        <PropertyRef Name="author" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Post__parent_pos__239E4DCF">
+    <End Role="Thread" Type="MvcForumsModel.Store.Thread" Multiplicity="1" />
+    <End Role="Post" Type="MvcForumsModel.Store.Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Thread">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Post">
+        <PropertyRef Name="parent_post" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Thread__author__276EDEB3">
+    <End Role="User" Type="MvcForumsModel.Store.User" Multiplicity="1" />
+    <End Role="Thread" Type="MvcForumsModel.Store.Thread" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Thread">
+        <PropertyRef Name="author" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Thread__forum__117F9D94">
+    <End Role="Forum" Type="MvcForumsModel.Store.Forum" Multiplicity="1" />
+    <End Role="Thread" Type="MvcForumsModel.Store.Thread" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Forum">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Thread">
+        <PropertyRef Name="forum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Users__role__25869641">
+    <End Role="Role" Type="MvcForumsModel.Store.Role" Multiplicity="1" />
+    <End Role="User" Type="MvcForumsModel.Store.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

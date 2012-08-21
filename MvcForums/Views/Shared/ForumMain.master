@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ForumMain.master.cs" Inherits="MvcForums.Views.Shared.ForumMain" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder  ClientIDMode="Static" ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="Stylesheet" href="~/Content/Site.css" type="text/css" />
+</head>
+<body>
+<div id="navbar">
+<% if (Request.IsAuthenticated){ %>
+<ul id="navlist">
+<li>Forums</li>
+<li><a href="/Account/Logout">Logout</a></li>
+<% if (Session["Role"] == "admin")
+   { %>
+<li><a href="/Admin">Admin</a></li>
+<%} %>
+</ul>
+
+<%} else{%>
+
+
+<%}%>
+</div>
+<asp:ContentPlaceHolder ClientIDMode="Static" ID="header" runat="server">
+
+</asp:ContentPlaceHolder>
+
+    <div id="mainContentWrapper">
+        <asp:ContentPlaceHolder ClientIDMode="Static" ID="mainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+</body>
+</html>

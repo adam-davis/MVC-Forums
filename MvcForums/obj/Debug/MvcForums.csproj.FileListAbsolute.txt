@@ -1,0 +1,5 @@
+c:\documents and settings\adamdavis\my documents\visual studio 2010\Projects\MvcForums\MvcForums\bin\MvcForums.dll
+c:\documents and settings\adamdavis\my documents\visual studio 2010\Projects\MvcForums\MvcForums\bin\MvcForums.pdb
+c:\documents and settings\adamdavis\my documents\visual studio 2010\Projects\MvcForums\MvcForums\obj\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\adamdavis\my documents\visual studio 2010\Projects\MvcForums\MvcForums\obj\Debug\MvcForums.dll
+c:\documents and settings\adamdavis\my documents\visual studio 2010\Projects\MvcForums\MvcForums\obj\Debug\MvcForums.pdb
